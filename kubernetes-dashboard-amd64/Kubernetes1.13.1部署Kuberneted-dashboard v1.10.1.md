@@ -74,6 +74,7 @@ spec:
   ports:
     - port: 443
       targetPort: 8443
+      nodePort: 30001
   selector:
     k8s-app: kubernetes-dashboard
                                       
@@ -110,7 +111,7 @@ NAME                                   READY   STATUS    RESTARTS   AGE   IP    
 kubernetes-dashboard-cb55bd5bd-4jsh7   1/1     Running   0          40s   10.254.73.2   10.2.8.34   <none>           <none>
 ```
 
-### 三、访问dashboard
+### 三、访问dashboard(https://NODE-IP:30001 火狐浏览器加例外访问)
 ##### 1、注意有证书需要域名访问，如果有DNS可以配置域名解析，没有Host绑定即可
 
 ##### 2、选择token访问，token获取方法如下
